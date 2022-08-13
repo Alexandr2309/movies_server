@@ -12,11 +12,11 @@
 // )
 const { Client } = require('pg')
 
-const client = new Client({
+module.exports = new Client({
 	connectionString: process.env.DATABASE_URL,
 	ssl: {
 		rejectUnauthorized: false
 	}
-})
+}).connect()
 
-client.connect()
+
