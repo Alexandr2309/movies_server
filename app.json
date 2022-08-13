@@ -12,7 +12,7 @@
   "env": {
     "DATABASE_URIL": {
       "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "postgres://postgres:Saha230904@localhost:5432/movies_site"
+      "value": "postgres://postgres:Saha230904@localhost:5432/movies_site"
     }
   }
 }
