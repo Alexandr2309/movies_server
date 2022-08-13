@@ -1,4 +1,4 @@
-require('dotenv').config()
+process.env.NODE_ENV === 'production' ? null : require('dotenv').config()
 const express = require('express')
 const sequelize = require('./db')
 const models = require('./models/models')
@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 8000
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.use('/api', router)
 app.use(errorHandler)
 
