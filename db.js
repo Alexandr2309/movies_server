@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize')
 console.log(process.env)
-module.exports = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+module.exports = new Sequelize(process.env.DATBASE_URL, {
 	dialect: 'postgres',
 	port: process.env.DB_PORT,
 	host: process.env.DB_HOST
