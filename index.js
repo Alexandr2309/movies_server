@@ -1,4 +1,4 @@
-require('dotenv').config()
+process.env.NODE_ENV === 'production' ? null : require('dotenv').config()
 const express = require('express')
 const sequelize = require('./db')
 const models = require('./models/models')
