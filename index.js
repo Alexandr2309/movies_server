@@ -1,4 +1,4 @@
-process.env.NODE_ENV === 'production' ? null : require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const sequelize = require('./db')
 const models = require('./models/models')
@@ -15,11 +15,16 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/api', router)
 app.use(errorHandler)
 
+app.get('/', (req, res) => {
+	res.send('Сервер работает!')
+})
+
 const start = async () => {
 	try {
 		await sequelize.authenticate()
 		await sequelize.sync()
-		app.listen(PORT, () => console.log(`Server started at port ${PORT}`))
+		app.listen(PORT, () => console.log(`Server started at port ${PORT}`)
+		)
 	} catch (e) {
 		console.log(e)
 	}
