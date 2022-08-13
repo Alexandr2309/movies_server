@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize')
-console.log(process.env.DATABASE_URI)
+console.log(process.env.DATABASE_URIL)
 
 const connectString = process.env.DATBASE_URL
 const connectionSTr = process.env.DATBASE_URI
