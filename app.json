@@ -1,4 +1,14 @@
 {
+  "name": "Start on Heroku: Node.js",
+  "description": "A barebones Node.js app using Express 4",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/main/public/node.svg",
+  "keywords": [
+    "node",
+    "express",
+    "heroku"
+  ],
+  "image": "heroku/nodejs",
   "env": {
     "DATABASE_URIL": {
       "description": "A secret key for verifying the integrity of signed cookies.",
@@ -6,4 +16,3 @@
     }
   }
 }
-
